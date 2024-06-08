@@ -3,9 +3,6 @@ const utilsController = require('../../controllers/utils.controller');
 
 const router = express.Router();
 
-router.route('/test').get((req, res) => {
-  res.json({ success: true });
-});
 router.route('/siteValidity').get(utilsController.getSiteValidity);
 router.route('/siteValidity/create').put(utilsController.createSiteValidity);
 module.exports = router;
