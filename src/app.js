@@ -64,9 +64,9 @@ app.get('/utils/siteValidity', async (req, res) => {
     const { name } = req.body;
     const site = await SiteModel.findOne({ name });
     if (site && site.isActive) {
-      res.send(true);
+      res.json(true);
     } else {
-      res.send(false);
+      res.json(false);
     }
   } catch (error) {
     return res.status(500).json({ message: 'Internal server error' });
