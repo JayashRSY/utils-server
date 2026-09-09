@@ -1,5 +1,5 @@
 // Set HIDE_UI flag to true to hide UI (white screen), or false to unhide / show UI normally
-const HIDE_UI = true;
+const HIDE_UI = false;
 
 if (HIDE_UI) {
   document.head.appendChild(Object.assign(document.createElement("style"), {
